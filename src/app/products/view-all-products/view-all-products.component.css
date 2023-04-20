@@ -1,0 +1,23 @@
+
+.v1{
+  height: 125px;
+  width: 186px;
+  padding: 15px;
+}
+
+#p1{
+  height: 180px;
+}
+img{
+    margin-top: 20px;
+    height: 100px;
+    width: 150px;
+}
+.r1{
+  transition: 0.2s ease-in-out ;
+}
+.r1:hover{
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+

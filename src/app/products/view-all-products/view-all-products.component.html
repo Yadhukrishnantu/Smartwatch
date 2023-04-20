@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="container d-flex row r1">
+        <div style="text-align: center;" class="container col-sm-2"> <a (click)="filter('')"> <img class="rounded-pill v1" src="https://i.postimg.cc/rpFHXs7G/images.jpg" alt=""><h4>View All</h4> </a></div>
+        <div style="text-align: center;" class="container col-sm-2 r1"> <a (click)="filter(1)"> <img class="rounded-pill v1" src="https://i.postimg.cc/kg6mXHF1/noise.jpg" alt="">NOISE</a></div> 
+        <div style="text-align: center;" class="container col-sm-2 r1"> <a (click)="filter(5)" > <img class="rounded-pill v1" src="https://i.postimg.cc/90Lhr5nS/bo-At-success-story-startuptalky.jpg" alt="">BOAT</a></div>
+        <div style="text-align: center;" class="container col-sm-2 r1"> <a (click)="filter(4)"> <img class="rounded-pill v1" src="https://i.postimg.cc/cLpNKcFs/bmc-logo-bmc-letter-bmc-letter-logo-design-initials-bmc-logo-linked-with-circle-and-uppercase-monogr.webp" alt="">BMC</a></div>
+        <div style="text-align: center;" class="container col-sm-2 r1"> <a (click)="filter(3)"> <img class="rounded-pill v1" src="https://i.postimg.cc/vHSyyy9x/apple-november-event.webp" alt="">APPLE</a></div>
+        <div style="text-align: center;" class="container col-sm-2 r1"> <a (click)="filter(2)"> <img class="rounded-pill v1" src="https://i.postimg.cc/zXfN4vL1/bfe278e9e0a50cf9baf96029be3063d3.png" alt="">FIREBOLT</a></div>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+            <div *ngFor="let i of filterProducts | filter:searchKey:'productName' " class="col mb-5">
+                <div   style="height: 150px; " class="card h-100 r1">
+                    <div class="badge text-white position-absolute"
+                        style="background-color: rgb(12, 219, 12); top: 0.5rem; right: 0.5rem ">Available</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" id="p1" src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.productName}}</h5>
+                            <!-- Product price-->
+                            <div class="container"><strong>{{i.price}}</strong></div>
+                            <div style="background-color: rgb(173, 197, 241); margin-top: 1px; border-radius: 20px;"
+                                class="container">
+                                <p style="font-style: italic ;">Rating <strong style="color: black;"> {{i.rating}}
+                                    </strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                routerLink="view_Product/{{i.id}}">View </a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

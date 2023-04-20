@@ -1,0 +1,22 @@
+h1{
+    color: rgb(160, 167, 164);
+}
+
+button{
+    width: 200px;
+    transition: .2s ease-in;
+
+}
+button.hover{
+   transform: scale(1.1);
+   background-color: darkslateblue;
+}
+
+form{
+    transition: .2s ease-in;
+    background-color: rgb(122, 173, 156);
+}
+form.hover{
+    transform: scale(1.01);
+    background-color: aliceblue;
+}
